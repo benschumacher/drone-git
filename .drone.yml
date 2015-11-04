@@ -18,6 +18,15 @@ publish:
     repo: plugins/drone-git
     when:
       branch: master
+      owner: drone-plugin
+  docker:
+    registry: shippedrepos-docker-drone.bintray.io
+    repo: plugins/drone-git
+    username: $$DOCKER_USER
+    password: $$DOCKER_PASS
+    email: $$DOCKER_EMAIL
+    when:
+      branch: master
 
 plugin:
   name: Git
